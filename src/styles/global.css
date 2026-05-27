@@ -571,6 +571,15 @@ textarea {
   padding: 13px 14px;
 }
 
+.spam-trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 textarea {
   resize: vertical;
 }

@@ -22,7 +22,10 @@ const notes = [
   </section>
 
   <section class="section contact-layout">
-    <form class="booking-form" action="#" method="post">
+    <form class="booking-form" action="https://formsubmit.co/keith.inkedskin@gmail.com" method="post">
+      <input type="hidden" name="_subject" value="New tattoo enquiry from Inked Skin website" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="text" name="_honey" class="spam-trap" tabindex="-1" autocomplete="off" aria-hidden="true" />
       <label>
         Name
         <input type="text" name="name" autocomplete="name" required />
@@ -37,7 +40,7 @@ const notes = [
       </label>
       <label>
         Tattoo idea
-        <textarea name="idea" rows="5" required></textarea>
+        <textarea name="idea" rows="5" minlength="20" required></textarea>
       </label>
       <div class="form-grid">
         <label>
@@ -58,7 +61,7 @@ const notes = [
         <textarea name="details" rows="4"></textarea>
       </label>
       <button class="button primary" type="submit">Submit your enquiry</button>
-      <p class="form-note">This form is ready to connect to Formspree once the project has a form endpoint.</p>
+      <p class="form-note">Protected with a hidden spam trap and form-service spam checks.</p>
     </form>
 
     <aside class="booking-aside">
