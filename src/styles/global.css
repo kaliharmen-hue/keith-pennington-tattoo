@@ -26,6 +26,7 @@ body {
   min-width: 320px;
   background: var(--ink);
   color: var(--bone);
+  font-size: 18px;
 }
 
 body::selection {
@@ -69,15 +70,20 @@ p {
   gap: 12px;
 }
 
-.brand-mark {
+.brand-logo {
+  width: 86px;
+  height: 48px;
   display: grid;
-  width: 42px;
-  height: 42px;
   place-items: center;
-  border: 1px solid rgba(242, 238, 231, 0.42);
-  color: var(--paper);
-  font-family: Georgia, serif;
-  font-size: 0.86rem;
+  overflow: hidden;
+  border: 1px solid rgba(242, 238, 231, 0.2);
+  background: var(--paper);
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .brand strong,
@@ -86,13 +92,13 @@ p {
 }
 
 .brand strong {
-  font-size: 0.98rem;
+  font-size: 1rem;
 }
 
 .brand small {
   margin-top: 2px;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
 }
 
 .site-nav {
@@ -104,7 +110,7 @@ p {
 .site-nav a,
 .site-footer a {
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.98rem;
 }
 
 .site-nav a[aria-current="page"],
@@ -117,7 +123,7 @@ p {
   border: 1px solid rgba(242, 238, 231, 0.28);
   padding: 10px 16px;
   color: var(--paper);
-  font-size: 0.88rem;
+  font-size: 0.96rem;
 }
 
 .hero {
@@ -137,7 +143,7 @@ p {
 .eyebrow {
   margin-bottom: 14px;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -157,7 +163,7 @@ h1 {
   max-width: 680px;
   margin-top: 24px;
   color: var(--muted);
-  font-size: clamp(1.08rem, 2.2vw, 1.38rem);
+  font-size: clamp(1.18rem, 2.2vw, 1.48rem);
 }
 
 .button-row {
@@ -174,6 +180,7 @@ h1 {
   justify-content: center;
   border: 1px solid transparent;
   padding: 12px 18px;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.1;
 }
@@ -220,7 +227,7 @@ h2 {
 
 .prose {
   color: var(--muted);
-  font-size: 1.04rem;
+  font-size: 1.12rem;
 }
 
 .prose > * + * {
@@ -265,6 +272,7 @@ h2 {
   max-width: 760px;
   margin-top: 26px;
   color: var(--muted);
+  font-size: 1.08rem;
 }
 
 .gallery-grid,
@@ -464,6 +472,7 @@ label {
   display: grid;
   gap: 8px;
   color: var(--muted);
+  font-size: 1.02rem;
   font-weight: 700;
 }
 
@@ -495,7 +504,7 @@ textarea:focus {
 
 .form-note {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.96rem;
 }
 
 .booking-aside {
@@ -507,6 +516,7 @@ textarea:focus {
   margin: 20px 0 0;
   padding-left: 20px;
   color: var(--muted);
+  font-size: 1.05rem;
 }
 
 .booking-aside li + li {
@@ -524,6 +534,7 @@ textarea:focus {
 
 .site-footer p {
   margin-top: 6px;
+  font-size: 1rem;
 }
 
 .site-footer nav {
@@ -537,6 +548,11 @@ textarea:focus {
     position: static;
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .brand-logo {
+    width: 78px;
+    height: 44px;
   }
 
   .site-nav {
@@ -577,6 +593,10 @@ textarea:focus {
 }
 
 @media (max-width: 560px) {
+  body {
+    font-size: 17px;
+  }
+
   h1 {
     font-size: clamp(3rem, 16vw, 4.6rem);
   }

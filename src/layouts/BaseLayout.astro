@@ -2,12 +2,13 @@
 import '../styles/global.css';
 
 const {
-  title = 'Keith Pennington Tattoo Artist',
-  description = 'Custom tattoo work by Keith Pennington in Shirley, Southampton.',
+  title = 'Inked Skin | Keith Pennington Tattoo Artist',
+  description = 'Custom tattoo work at Inked Skin by Keith Pennington in Shirley, Southampton.',
   current = ''
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const logoSrc = `${base}assets/logo/inkedskin-logo.jpeg`;
 const navItems = [
   { href: base, label: 'Home', key: 'home' },
   { href: `${base}about/`, label: 'About', key: 'about' },
@@ -25,11 +26,13 @@ const navItems = [
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href={base} aria-label="Keith Pennington Tattoo home">
-        <span class="brand-mark">KP</span>
+      <a class="brand" href={base} aria-label="Inked Skin home">
+        <span class="brand-logo">
+          <img src={logoSrc} alt="Inked Skin" />
+        </span>
         <span>
-          <strong>Keith Pennington</strong>
-          <small>Tattoo Artist</small>
+          <strong>Inked Skin</strong>
+          <small>Keith Pennington, Tattoo Artist</small>
         </span>
       </a>
       <nav class="site-nav" aria-label="Main navigation">
@@ -44,8 +47,8 @@ const navItems = [
     </main>
     <footer class="site-footer">
       <div>
-        <strong>Keith Pennington Tattoo</strong>
-        <p>Custom tattoo work in Shirley, Southampton.</p>
+        <strong>Inked Skin</strong>
+        <p>Custom tattoo work by Keith Pennington in Shirley, Southampton.</p>
       </div>
       <nav aria-label="Footer navigation">
         {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
