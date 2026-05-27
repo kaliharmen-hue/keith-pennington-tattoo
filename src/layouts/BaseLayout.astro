@@ -7,11 +7,12 @@ const {
   current = ''
 } = Astro.props;
 
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const navItems = [
-  { href: '/', label: 'Home', key: 'home' },
-  { href: '/about/', label: 'About', key: 'about' },
-  { href: '/gallery/', label: 'Gallery', key: 'gallery' },
-  { href: '/contact/', label: 'Contact', key: 'contact' }
+  { href: base, label: 'Home', key: 'home' },
+  { href: `${base}about/`, label: 'About', key: 'about' },
+  { href: `${base}gallery/`, label: 'Gallery', key: 'gallery' },
+  { href: `${base}contact/`, label: 'Contact', key: 'contact' }
 ];
 ---
 <!doctype html>
@@ -24,7 +25,7 @@ const navItems = [
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="/" aria-label="Keith Pennington Tattoo home">
+      <a class="brand" href={base} aria-label="Keith Pennington Tattoo home">
         <span class="brand-mark">KP</span>
         <span>
           <strong>Keith Pennington</strong>
@@ -36,7 +37,7 @@ const navItems = [
           <a href={item.href} aria-current={current === item.key ? 'page' : undefined}>{item.label}</a>
         ))}
       </nav>
-      <a class="header-cta" href="/contact/">Start enquiry</a>
+      <a class="header-cta" href={`${base}contact/`}>Start enquiry</a>
     </header>
     <main>
       <slot />

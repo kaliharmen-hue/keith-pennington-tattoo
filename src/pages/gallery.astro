@@ -2,6 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const categories = ['Recent tattoos', 'Black and grey', 'Fine line and script', 'Custom pieces', 'Cover-ups and reworks', 'Available designs'];
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const galleryImages = Array.from({ length: 40 }, (_, index) => {
+  const number = String(index + 1).padStart(2, '0');
+  return {
+    src: `${base}assets/gallery/gallery-${number}.jpeg`,
+    alt: `Tattoo work by Keith Pennington, image ${index + 1}`
+  };
+});
 ---
 <BaseLayout
   current="gallery"
@@ -25,11 +33,11 @@ const categories = ['Recent tattoos', 'Black and grey', 'Fine line and script', 
   </section>
 
   <section class="section" id="work">
-    <div class="gallery-grid">
-      {categories.map((category, index) => (
-        <article class={`gallery-tile large tile-${index + 1}`}>
-          <span>{category}</span>
-        </article>
+    <div class="photo-grid full-gallery">
+      {galleryImages.map((image, index) => (
+        <a class="photo-card" href={image.src} target="_blank" rel="noreferrer">
+          <img src={image.src} alt={image.alt} loading={index < 6 ? 'eager' : 'lazy'} />
+        </a>
       ))}
     </div>
   </section>
@@ -40,6 +48,6 @@ const categories = ['Recent tattoos', 'Black and grey', 'Fine line and script', 
       <h2>Use the gallery as a starting point for the style, size or feel you are drawn to.</h2>
       <p>Keith does not copy another artist's work, but he can help shape your idea into something original.</p>
     </div>
-    <a class="button primary" href="/contact/">Make an enquiry</a>
+    <a class="button primary" href={`${base}contact/`}>Make an enquiry</a>
   </section>
 </BaseLayout>
