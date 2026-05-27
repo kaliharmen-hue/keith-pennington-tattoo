@@ -35,12 +35,17 @@ const galleryImages = Array.from({ length: 40 }, (_, index) => {
   <section class="section" id="work">
     <div class="photo-grid full-gallery">
       {galleryImages.map((image, index) => (
-        <a class="photo-card" href={image.src} target="_blank" rel="noreferrer">
+        <a class="photo-card" href={image.src} data-lightbox-image={image.src} data-lightbox-alt={image.alt}>
           <img src={image.src} alt={image.alt} loading={index < 6 ? 'eager' : 'lazy'} />
         </a>
       ))}
     </div>
   </section>
+
+  <div class="lightbox" data-lightbox hidden>
+    <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image">X</button>
+    <img data-lightbox-img src="" alt="" />
+  </div>
 
   <section class="section cta-band">
     <div>
@@ -50,4 +55,50 @@ const galleryImages = Array.from({ length: 40 }, (_, index) => {
     </div>
     <a class="button primary" href={`${base}contact/`}>Make an enquiry</a>
   </section>
+
+  <script>
+    const lightbox = document.querySelector('[data-lightbox]');
+    const lightboxImage = document.querySelector('[data-lightbox-img]');
+    const closeButton = document.querySelector('[data-lightbox-close]');
+    const imageLinks = document.querySelectorAll('[data-lightbox-image]');
+
+    const closeLightbox = () => {
+      lightbox?.setAttribute('hidden', '');
+      document.body.classList.remove('lightbox-open');
+      if (lightboxImage instanceof HTMLImageElement) {
+        lightboxImage.removeAttribute('src');
+        lightboxImage.alt = '';
+      }
+    };
+
+    imageLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const imageSrc = link.getAttribute('data-lightbox-image');
+        const imageAlt = link.getAttribute('data-lightbox-alt') || 'Tattoo gallery image';
+
+        if (!imageSrc || !(lightboxImage instanceof HTMLImageElement)) {
+          return;
+        }
+
+        lightboxImage.src = imageSrc;
+        lightboxImage.alt = imageAlt;
+        lightbox?.removeAttribute('hidden');
+        document.body.classList.add('lightbox-open');
+        closeButton?.focus();
+      });
+    });
+
+    closeButton?.addEventListener('click', closeLightbox);
+    lightbox?.addEventListener('click', (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !lightbox?.hasAttribute('hidden')) {
+        closeLightbox();
+      }
+    });
+  </script>
 </BaseLayout>
