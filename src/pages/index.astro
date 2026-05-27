@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const styles = ['Black and grey', 'Fine line', 'Script', 'Symbolic tattoos', 'Cover-ups and reworks', 'Small pieces'];
+---
+<BaseLayout
+  current="home"
+  title="Keith Pennington Tattoo Artist | Custom Tattoos in Shirley, Southampton"
+  description="Custom tattoo work by Keith Pennington in Shirley, Southampton. Thoughtful black and grey, fine line, script and personal tattoo designs without the ego."
+>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Tattoo artist in Shirley, Southampton</p>
+      <h1>Custom tattoos without the ego</h1>
+      <p class="lede">Thoughtful tattoo work designed with care, shaped around your ideas and created to last.</p>
+      <div class="button-row">
+        <a class="button primary" href="/contact/">Book a consultation</a>
+        <a class="button secondary" href="/gallery/">View the gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section intro-grid">
+    <div>
+      <p class="eyebrow">A calmer way to get tattooed</p>
+      <h2>Good tattooing starts before the needle comes out.</h2>
+    </div>
+    <div class="prose">
+      <p>Getting a tattoo is personal. It might mark a moment, carry a memory, say something without words, or simply be a piece of art you want to wear.</p>
+      <p>Keith takes the time to understand what you want before the needle comes anywhere near your skin. Every piece is approached with attention to placement, flow, detail and how it will age over time.</p>
+      <p>No rushed work. No copy-and-paste designs. No making you feel awkward for asking questions.</p>
+    </div>
+  </section>
+
+  <section class="section muted">
+    <div class="section-heading">
+      <p class="eyebrow">Tattoo styles</p>
+      <h2>Clear guidance, steady work and designs that fit the body.</h2>
+    </div>
+    <div class="style-list" aria-label="Tattoo styles">
+      {styles.map((style) => <span>{style}</span>)}
+    </div>
+    <p class="section-note">Every tattoo starts with a conversation. If your idea needs refining, resizing or adjusting to work better as a tattoo, Keith will guide you through it clearly.</p>
+  </section>
+
+  <section class="section gallery-preview">
+    <div class="section-heading">
+      <p class="eyebrow">Recent work</p>
+      <h2>Browse recent tattoos, healed pieces, custom designs and available flash.</h2>
+    </div>
+    <div class="gallery-grid compact" aria-label="Gallery preview">
+      <div class="gallery-tile ink-one"><span>Black and grey</span></div>
+      <div class="gallery-tile ink-two"><span>Fine line</span></div>
+      <div class="gallery-tile ink-three"><span>Script</span></div>
+    </div>
+    <a class="text-link" href="/gallery/">View full gallery</a>
+  </section>
+
+  <section class="section cta-band">
+    <div>
+      <p class="eyebrow">Ready to talk through an idea?</p>
+      <h2>You do not need to have everything worked out before getting in touch.</h2>
+    </div>
+    <a class="button primary" href="/contact/">Start your booking enquiry</a>
+  </section>
+</BaseLayout>

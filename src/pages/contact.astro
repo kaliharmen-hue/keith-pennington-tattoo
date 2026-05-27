@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const notes = [
+  'A deposit may be required to secure your appointment',
+  'Deposits are usually non-refundable',
+  'Final pricing depends on size, placement, detail and session time',
+  'You must be 18 or over to get tattooed',
+  'Valid ID may be required',
+  'Please do not attend your appointment under the influence of alcohol or drugs'
+];
+---
+<BaseLayout
+  current="contact"
+  title="Book a Tattoo Consultation | Keith Pennington Tattoo Artist"
+  description="Send your tattoo idea to Keith Pennington and start your booking enquiry. Custom tattoos, cover-ups, script and fine line work in Shirley, Southampton."
+>
+  <section class="page-hero contact-hero">
+    <p class="eyebrow">Bookings</p>
+    <h1>Book a tattoo consultation</h1>
+    <p>Ready to start the conversation? Send Keith your tattoo idea. You do not need a perfect brief. A rough idea is enough to begin.</p>
+  </section>
+
+  <section class="section contact-layout">
+    <form class="booking-form" action="#" method="post">
+      <label>
+        Name
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
+      <label>
+        Email address
+        <input type="email" name="email" autocomplete="email" required />
+      </label>
+      <label>
+        Phone number
+        <input type="tel" name="phone" autocomplete="tel" />
+      </label>
+      <label>
+        Tattoo idea
+        <textarea name="idea" rows="5" required></textarea>
+      </label>
+      <div class="form-grid">
+        <label>
+          Placement
+          <input type="text" name="placement" />
+        </label>
+        <label>
+          Approximate size
+          <input type="text" name="size" />
+        </label>
+      </div>
+      <label>
+        Preferred dates or availability
+        <input type="text" name="availability" />
+      </label>
+      <label>
+        Anything else Keith should know?
+        <textarea name="details" rows="4"></textarea>
+      </label>
+      <button class="button primary" type="submit">Submit your enquiry</button>
+      <p class="form-note">This form is ready to connect to Formspree once the project has a form endpoint.</p>
+    </form>
+
+    <aside class="booking-aside">
+      <div>
+        <p class="eyebrow">What to include</p>
+        <h2>The more detail you can give, the easier it is to advise on design, timing and price.</h2>
+        <ul>
+          <li>Your tattoo idea</li>
+          <li>Approximate size and placement</li>
+          <li>Style, such as black and grey, fine line or script</li>
+          <li>Reference images</li>
+          <li>Whether it is new work, a cover-up or a rework</li>
+          <li>Any budget you are working with</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Before booking</p>
+        <ul>
+          {notes.map((note) => <li>{note}</li>)}
+        </ul>
+      </div>
+    </aside>
+  </section>
+</BaseLayout>

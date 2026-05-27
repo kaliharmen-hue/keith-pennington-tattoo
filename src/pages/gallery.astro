@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const categories = ['Recent tattoos', 'Black and grey', 'Fine line and script', 'Custom pieces', 'Cover-ups and reworks', 'Available designs'];
+---
+<BaseLayout
+  current="gallery"
+  title="Tattoo Gallery | Recent Work by Keith Pennington"
+  description="View recent tattoo work by Keith Pennington, including black and grey tattoos, fine line pieces, script, custom designs and cover-ups in Southampton."
+>
+  <section class="page-hero">
+    <p class="eyebrow">Gallery</p>
+    <h1>Recent work by Keith Pennington</h1>
+    <p>A selection of recent tattoo work, custom pieces, healed tattoos and available designs.</p>
+  </section>
+
+  <section class="section gallery-intro">
+    <div class="prose">
+      <p>Use this page to get a feel for Keith's style, approach and level of detail. Every tattoo is designed around the client, the placement and the way the piece will sit on the body.</p>
+      <p>Tattoos are not flat artwork. They move with the body, age with the skin and become part of the person wearing them. That is why Keith considers placement, scale, line weight, contrast and long-term wear before each piece begins.</p>
+    </div>
+    <div class="category-list" aria-label="Gallery categories">
+      {categories.map((category) => <a href="#work">{category}</a>)}
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="gallery-grid">
+      {categories.map((category, index) => (
+        <article class={`gallery-tile large tile-${index + 1}`}>
+          <span>{category}</span>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div>
+      <p class="eyebrow">Seen something you like?</p>
+      <h2>Use the gallery as a starting point for the style, size or feel you are drawn to.</h2>
+      <p>Keith does not copy another artist's work, but he can help shape your idea into something original.</p>
+    </div>
+    <a class="button primary" href="/contact/">Make an enquiry</a>
+  </section>
+</BaseLayout>

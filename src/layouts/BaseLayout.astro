@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+
+const {
+  title = 'Keith Pennington Tattoo Artist',
+  description = 'Custom tattoo work by Keith Pennington in Shirley, Southampton.',
+  current = ''
+} = Astro.props;
+
+const navItems = [
+  { href: '/', label: 'Home', key: 'home' },
+  { href: '/about/', label: 'About', key: 'about' },
+  { href: '/gallery/', label: 'Gallery', key: 'gallery' },
+  { href: '/contact/', label: 'Contact', key: 'contact' }
+];
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Keith Pennington Tattoo home">
+        <span class="brand-mark">KP</span>
+        <span>
+          <strong>Keith Pennington</strong>
+          <small>Tattoo Artist</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        {navItems.map((item) => (
+          <a href={item.href} aria-current={current === item.key ? 'page' : undefined}>{item.label}</a>
+        ))}
+      </nav>
+      <a class="header-cta" href="/contact/">Start enquiry</a>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div>
+        <strong>Keith Pennington Tattoo</strong>
+        <p>Custom tattoo work in Shirley, Southampton.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+    </footer>
+  </body>
+</html>
