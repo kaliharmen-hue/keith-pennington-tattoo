@@ -22,7 +22,7 @@ const notes = [
   </section>
 
   <section class="section contact-layout">
-    <form class="booking-form" action="https://formspree.io/f/meedvzrj" method="post">
+    <form class="booking-form" action="https://formspree.io/f/meedvzrj" method="post" enctype="multipart/form-data">
       <input type="hidden" name="_subject" value="New tattoo enquiry from Inked Skin website" />
       <input type="text" name="_gotcha" class="spam-trap" tabindex="-1" autocomplete="off" aria-hidden="true" />
       <div class="form-grid three-up">
@@ -56,6 +56,10 @@ const notes = [
       <label>
         <span>Preferred dates or availability</span>
         <input type="text" name="availability" />
+      </label>
+      <label>
+        <span>Reference images</span>
+        <input type="file" name="reference_images" accept="image/png,image/jpeg,image/webp" multiple />
       </label>
       <label>
         <span>Anything else Keith should know?</span>

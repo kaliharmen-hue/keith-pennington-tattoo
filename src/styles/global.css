@@ -575,6 +575,21 @@ textarea {
   padding: 15px 16px;
 }
 
+input[type="file"] {
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 14px;
+  border: 1px solid rgba(242, 238, 231, 0.22);
+  background: var(--graphite);
+  color: var(--paper);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 10px 14px;
+}
+
 .spam-trap {
   position: absolute;
   left: -9999px;
