@@ -550,15 +550,19 @@ h2 {
 
 .booking-form {
   display: grid;
-  gap: 18px;
+  gap: 20px;
 }
 
 label {
   display: grid;
-  gap: 8px;
+  gap: 10px;
   color: var(--muted);
   font-size: 1.02rem;
   font-weight: 700;
+}
+
+label span {
+  display: block;
 }
 
 input,
@@ -568,7 +572,7 @@ textarea {
   background: #151312;
   color: var(--paper);
   font: inherit;
-  padding: 13px 14px;
+  padding: 15px 16px;
 }
 
 .spam-trap {
@@ -592,13 +596,31 @@ textarea:focus {
 
 .form-grid {
   display: grid;
+  gap: 16px;
+}
+
+.form-grid.two-up {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+}
+
+.form-grid.three-up {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
 }
 
 .form-note {
+  max-width: 360px;
   color: var(--muted);
   font-size: 0.96rem;
+  line-height: 1.45;
 }
 
 .booking-aside {
@@ -706,7 +728,9 @@ textarea:focus {
 
   .gallery-grid,
   .photo-grid,
-  .form-grid {
+  .form-grid,
+  .form-grid.two-up,
+  .form-grid.three-up {
     grid-template-columns: 1fr;
   }
 
@@ -729,8 +753,13 @@ textarea:focus {
     max-height: 82vh;
   }
 
-  .button {
+  .button,
+  .form-actions .button {
     width: 100%;
+  }
+
+  .form-actions {
+    display: grid;
   }
 
   .site-footer {
