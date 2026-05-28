@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const approachImage = `${base}assets/about/keith-pennington-tattoo-artist.png`;
+const ctaImage = `${base}assets/about/ready-to-talk-keith-tattoo-artist.png`;
 const galleryPreview = [
   { src: `${base}assets/gallery/gallery-01.jpeg`, label: 'Black and grey tattoo' },
   { src: `${base}assets/gallery/gallery-20.jpeg`, label: 'Custom tattoo detail' },
@@ -70,10 +71,13 @@ const galleryPreview = [
   </section>
 
   <section class="section cta-band">
-    <div>
+    <div class="cta-copy">
       <p class="eyebrow">Ready to talk through an idea?</p>
       <h2>You do not need to have everything worked out before getting in touch.</h2>
+      <a class="button primary" href={`${base}contact/`}>Start your booking enquiry</a>
     </div>
-    <a class="button primary" href={`${base}contact/`}>Start your booking enquiry</a>
+    <figure class="cta-image">
+      <img src={ctaImage} alt="Keith Pennington discussing tattoo ideas at Inked Skin" loading="lazy" />
+    </figure>
   </section>
 </BaseLayout>
