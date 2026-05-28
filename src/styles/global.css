@@ -108,7 +108,7 @@ p {
 .site-nav {
   display: flex;
   justify-content: center;
-  gap: clamp(12px, 3vw, 34px);
+  gap: clamp(12px, 2vw, 28px);
 }
 
 .site-nav a,
@@ -313,6 +313,25 @@ h2 {
   margin-top: 26px;
   color: var(--muted);
   font-size: 1.08rem;
+}
+
+.quick-link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.quick-link-grid article {
+  border: 1px solid rgba(242, 238, 231, 0.13);
+  background: #1d1b19;
+  padding: clamp(22px, 4vw, 34px);
+}
+
+.quick-link-grid p {
+  margin: 14px 0 24px;
+  color: var(--muted);
+  font-size: 1.05rem;
 }
 
 .gallery-grid,
@@ -818,7 +837,8 @@ h3 {
   .gallery-intro,
   .contact-layout,
   .story-layout,
-  .cta-band {
+  .cta-band,
+  .quick-link-grid {
     grid-template-columns: 1fr;
   }
 
