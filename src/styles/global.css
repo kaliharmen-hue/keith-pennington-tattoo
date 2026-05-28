@@ -575,21 +575,6 @@ textarea {
   padding: 15px 16px;
 }
 
-input[type="file"] {
-  cursor: pointer;
-}
-
-input[type="file"]::file-selector-button {
-  margin-right: 14px;
-  border: 1px solid rgba(242, 238, 231, 0.22);
-  background: var(--graphite);
-  color: var(--paper);
-  cursor: pointer;
-  font: inherit;
-  font-weight: 700;
-  padding: 10px 14px;
-}
-
 .spam-trap {
   position: absolute;
   left: -9999px;
@@ -652,6 +637,95 @@ textarea:focus {
 
 .booking-aside li + li {
   margin-top: 10px;
+}
+
+.process-section .section-heading,
+.faq-section .section-heading {
+  margin-bottom: 42px;
+}
+
+.process-list {
+  display: grid;
+  gap: 18px;
+}
+
+.process-step {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: clamp(18px, 4vw, 36px);
+  border-top: 1px solid rgba(242, 238, 231, 0.12);
+  padding-top: 28px;
+}
+
+.process-step span {
+  color: var(--rust);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 0.92;
+}
+
+h3 {
+  margin: 0;
+  color: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.process-step p {
+  max-width: 920px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.faq-list details {
+  border: 1px solid rgba(242, 238, 231, 0.13);
+  background: #1d1b19;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 22px clamp(18px, 4vw, 30px);
+  color: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  line-height: 1.15;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  float: right;
+  color: var(--rust);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+}
+
+.faq-list details[open] summary::after {
+  content: "X";
+}
+
+.faq-list details > div {
+  display: grid;
+  gap: 14px;
+  padding: 0 clamp(18px, 4vw, 30px) 26px;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.faq-list p {
+  margin: 0;
 }
 
 .site-footer {
@@ -775,6 +849,10 @@ textarea:focus {
 
   .form-actions {
     display: grid;
+  }
+
+  .process-step {
+    grid-template-columns: 1fr;
   }
 
   .site-footer {

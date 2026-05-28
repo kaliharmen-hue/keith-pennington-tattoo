@@ -9,6 +9,146 @@ const notes = [
   'Valid ID may be required',
   'Please do not attend your appointment under the influence of alcohol or drugs'
 ];
+
+const workflowSteps = [
+  {
+    title: 'Send your enquiry',
+    body: [
+      'Start by sending Keith your tattoo idea through the enquiry form.',
+      'You do not need to have everything perfectly worked out. A rough idea is enough to begin. Include the placement, approximate size, any reference images and anything you definitely do or do not want included.',
+      'Once you submit your enquiry, Keith will be in contact to find out more.'
+    ]
+  },
+  {
+    title: 'Share your references',
+    body: [
+      'Keith may ask you to send over images, sketches, examples or styles you like.',
+      'These are used as a starting point, not something to copy directly. They help Keith understand the feel, detail, layout and direction you are drawn to, so he can create a custom piece that works properly as a tattoo.'
+    ]
+  },
+  {
+    title: 'Pay your deposit',
+    body: [
+      'Before Keith begins the artwork, you will be asked to pay a deposit.',
+      'This secures time for your design and appointment planning. It also covers the time Keith spends developing the artwork, refining the idea and preparing the piece properly.',
+      'Deposits are not just about holding a date. They protect the work that happens before the tattoo begins.'
+    ]
+  },
+  {
+    title: 'Artwork and approval',
+    body: [
+      'Once the deposit has been paid, Keith will begin creating your artwork.',
+      'He will send the design back to you for approval before the tattoo appointment. Small adjustments can be discussed at this stage, especially if something needs refining so it feels right.',
+      'If the design direction changes completely after the artwork has been created, this may require a new design fee or an additional deposit. Keith puts proper time into each custom piece, so major changes that move away from the original brief need to be treated as new work.',
+      'This keeps the process fair for both sides.'
+    ]
+  },
+  {
+    title: 'Book your appointment',
+    body: [
+      'Once the artwork is approved, Keith will arrange a date and time for your tattoo.',
+      'Keith manages his diary carefully because he wants to be completely fresh for each client. Your tattoo matters, and he does not believe in rushing from one person to the next.',
+      'Appointments are available in the daytime, with some flexibility for evening sessions where possible.'
+    ]
+  },
+  {
+    title: 'Come to the studio',
+    body: [
+      'Your appointment will take place at Keith\'s personal studio in Shirley, Southampton.',
+      'You will be given any information you need before the session, including what to wear, what to bring and how to prepare.',
+      'If you are thinking about using numbing cream, please ask Keith first which one he recommends. This is not because he is affiliated with a brand, but because some numbing creams can affect the skin and make it harder to tattoo well.',
+      'If you do use numbing cream, read the instructions fully and time it correctly. Please arrive ready to be tattooed, rather than expecting to wait for the cream to start working during your appointment time.'
+    ]
+  }
+];
+
+const faqs = [
+  {
+    question: 'Will it hurt?',
+    answer: [
+      'Yes, but usually not in the dramatic way people build up in their heads.',
+      'Pain depends on the placement, size, detail, your pain tolerance and how long the session lasts. Some areas are more sensitive than others, and Keith will talk you through what to expect before you book.',
+      'If you are nervous, say so. It is completely normal.'
+    ]
+  },
+  {
+    question: 'What if I need to stop during a session?',
+    answer: [
+      'That is fine.',
+      'Keith would rather you say something than sit there silently suffering and slowly leaving your body like a Victorian ghost.',
+      'Short breaks are normal, especially during longer sessions. The main thing is to communicate with Keith so he can work with you and keep the session manageable.'
+    ]
+  },
+  {
+    question: 'What if I book a long session but cannot manage the full time?',
+    answer: [
+      'If you need to stop earlier than planned, Keith will talk you through the best option depending on how much has been completed.',
+      'Tattooing time is still booked time, so payment may still reflect the time set aside for your appointment. However, Keith will always be fair and practical about what happens next.',
+      'If a piece needs finishing over another session, this can be arranged.'
+    ]
+  },
+  {
+    question: 'If it is a long session, should I bring food?',
+    answer: [
+      'Yes.',
+      'For longer sessions, bring something easy to eat and drink. It is best not to arrive on an empty stomach.',
+      'Good options include water, a soft drink, fruit, a sandwich, protein bar or something sugary in case you feel light-headed.',
+      'Avoid turning up fuelled only by caffeine and blind optimism. Your body will have opinions.'
+    ]
+  },
+  {
+    question: 'What should I wear?',
+    answer: [
+      'Wear something comfortable that gives Keith easy access to the area being tattooed.',
+      'Arm tattoo: short sleeves or a loose top. Leg tattoo: shorts or loose trousers. Back tattoo: something that can be adjusted easily. Rib or sternum tattoo: clothing that gives access while still helping you feel comfortable.',
+      'Choose clothes you do not mind getting ink or stencil marks on.',
+      'If you are unsure what to wear, ask Keith before the appointment.'
+    ]
+  },
+  {
+    question: 'What can I expect during the appointment?',
+    answer: [
+      'Keith will make sure you are comfortable before he begins.',
+      'There will usually be music playing, but you can say if there is something you would prefer to listen to. If it helps you to wear headphones and zone out, that is absolutely fine. Keith can use his AirPods too.',
+      'You can also set up a tablet to watch something, as long as you can stay still and it does not get in the way of the tattooing.',
+      'The aim is to make the session feel calm, focused and manageable.',
+      'Please let Keith know in advance if you have any special requirements, sensory needs, medical considerations or anything that would help you feel more comfortable.'
+    ]
+  },
+  {
+    question: 'Can I bring a friend?',
+    answer: [
+      'Ask Keith before the appointment.',
+      'In some cases, bringing one person may be fine, especially if it helps you feel calmer. However, the studio needs to stay focused, clean and comfortable, so it is not always possible to bring someone with you.',
+      'Please do not turn up with extra people unless this has been agreed in advance.'
+    ]
+  },
+  {
+    question: 'Can I use numbing cream?',
+    answer: [
+      'Possibly, but please speak to Keith first.',
+      'Some numbing creams can affect the skin and make it harder to tattoo cleanly. Keith can advise you on what is suitable so you get the best possible result.',
+      'If you do use numbing cream, follow the instructions carefully and apply it at the right time before your appointment. You need to arrive ready to be tattooed, not waiting for the cream to kick in during your booked session.'
+    ]
+  },
+  {
+    question: 'Can I change the design after Keith has created the artwork?',
+    answer: [
+      'Small refinements are part of the process.',
+      'If something needs adjusting, Keith will talk it through with you and make reasonable changes before the appointment.',
+      'However, if you change your mind completely after the artwork has been created, this may be treated as a new design. In that case, an additional design fee or deposit may be needed.',
+      'Custom artwork takes time, so it is important that the original brief is as clear as possible before Keith begins.'
+    ]
+  },
+  {
+    question: 'What happens if I need to cancel or rearrange?',
+    answer: [
+      'Please give Keith as much notice as possible.',
+      'Because appointments are planned carefully and Keith does not stack clients back to back, late cancellations can be difficult to refill.',
+      'The exact deposit and cancellation policy should be confirmed with Keith before booking.'
+    ]
+  }
+];
 ---
 <BaseLayout
   current="contact"
@@ -22,7 +162,7 @@ const notes = [
   </section>
 
   <section class="section contact-layout">
-    <form class="booking-form" action="https://formspree.io/f/meedvzrj" method="post" enctype="multipart/form-data">
+    <form class="booking-form" action="https://formspree.io/f/meedvzrj" method="post">
       <input type="hidden" name="_subject" value="New tattoo enquiry from Inked Skin website" />
       <input type="text" name="_gotcha" class="spam-trap" tabindex="-1" autocomplete="off" aria-hidden="true" />
       <div class="form-grid three-up">
@@ -58,10 +198,6 @@ const notes = [
         <input type="text" name="availability" />
       </label>
       <label>
-        <span>Reference images</span>
-        <input type="file" name="reference_images" accept="image/png,image/jpeg,image/webp" multiple />
-      </label>
-      <label>
         <span>Anything else Keith should know?</span>
         <textarea name="details" rows="4"></textarea>
       </label>
@@ -91,5 +227,40 @@ const notes = [
         </ul>
       </div>
     </aside>
+  </section>
+
+  <section class="section muted process-section">
+    <div class="section-heading">
+      <p class="eyebrow">Booking workflow</p>
+      <h2>How the tattoo process works</h2>
+    </div>
+    <div class="process-list">
+      {workflowSteps.map((step, index) => (
+        <article class="process-step">
+          <span>{String(index + 1).padStart(2, '0')}</span>
+          <div>
+            <h3>{step.title}</h3>
+            {step.body.map((paragraph) => <p>{paragraph}</p>)}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section faq-section">
+    <div class="section-heading">
+      <p class="eyebrow">FAQs</p>
+      <h2>Questions before you book</h2>
+    </div>
+    <div class="faq-list">
+      {faqs.map((item) => (
+        <details>
+          <summary>{item.question}</summary>
+          <div>
+            {item.answer.map((paragraph) => <p>{paragraph}</p>)}
+          </div>
+        </details>
+      ))}
+    </div>
   </section>
 </BaseLayout>
