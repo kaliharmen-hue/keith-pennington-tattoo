@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const keithImage = `${base}assets/about/keith-pennington-tattoo-artist.png`;
 ---
 <BaseLayout
   current="about"
@@ -14,29 +15,27 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
     <p>Keith Pennington is a tattoo artist at Inked Skin in Shirley, Southampton, creating thoughtful tattoo work that feels personal, considered and built to last.</p>
   </section>
 
-  <section class="section story-layout">
-    <div class="portrait-panel">
-      <span>Calm studio energy</span>
-      <strong>Serious attention to detail</strong>
-    </div>
-    <div class="prose">
+  <section class="section about-detail">
+    <figure class="about-photo">
+      <img src={keithImage} alt="Keith Pennington tattooing at Inked Skin" />
+    </figure>
+    <div class="about-copy">
       <h2>A considered approach to every tattoo</h2>
       <p>Keith does not believe in rushing people through the process. Good tattoo work starts with listening properly, understanding the idea, looking at the placement, and making sure the design works with the body rather than fighting against it.</p>
       <p>Some ideas arrive fully formed. Others need shaping. Keith will help refine the concept, explain what will and will not translate well as a tattoo, and make sure the final design feels balanced, wearable and clear.</p>
-      <h2>First tattoo? You are in safe hands.</h2>
+      <h3>First tattoo? You are in safe hands.</h3>
       <p>If this is your first tattoo, Keith will talk you through the process so you know what to expect. From placement and sizing to pain levels, aftercare and healing, you will have the information you need before your appointment.</p>
       <p>There is no pressure, no judgement and no ridiculous questions. Well, unless you ask whether it will last forever. In which case, yes. That is sort of the point.</p>
+      <h3>Custom designs and personal pieces</h3>
+      <p>Many of Keith's tattoos are created from a client's idea, reference image, memory or meaning. That might be a small symbol, a piece of script, a tribute tattoo, a rework of an older piece, or something more detailed and planned over multiple sessions.</p>
+      <p>The focus is always the same: make it personal, make it work on the skin and make sure it feels like yours.</p>
     </div>
   </section>
 
-  <section class="section muted split">
+  <section class="section muted about-cta">
     <div>
-      <p class="eyebrow">Custom designs and personal pieces</p>
-      <h2>Built around your idea, not pulled from a template.</h2>
-    </div>
-    <div class="prose">
-      <p>Many of Keith's tattoos are created from a client's idea, reference image, memory or meaning. That might be a small symbol, a piece of script, a tribute tattoo, a rework of an older piece, or something more detailed and planned over multiple sessions.</p>
-      <p>The focus is always the same: make it personal, make it work on the skin and make sure it feels like yours.</p>
+      <p class="eyebrow">Ready to see the work?</p>
+      <h2>Browse the gallery or start a conversation about your idea.</h2>
       <div class="button-row">
         <a class="button primary" href={`${base}gallery/`}>View Keith's work</a>
         <a class="button secondary" href={`${base}contact/`}>Get in touch</a>

@@ -525,31 +525,46 @@ h2 {
   font-size: clamp(3.2rem, 8vw, 6.8rem);
 }
 
-.portrait-panel {
-  min-height: 540px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+.about-detail {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(28px, 6vw, 76px);
+  align-items: start;
+}
+
+.about-photo {
+  margin: 0;
   border: 1px solid rgba(242, 238, 231, 0.12);
-  padding: 28px;
-  background:
-    linear-gradient(180deg, rgba(21, 19, 18, 0.04), rgba(21, 19, 18, 0.88)),
-    url("/assets/about/keith-pennington-tattoo-artist.png") center / cover no-repeat;
+  background: #0e0d0c;
   box-shadow: var(--shadow);
 }
 
-.portrait-panel span {
-  color: var(--muted);
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.portrait-panel strong {
-  max-width: 12ch;
-  margin-top: 8px;
-  color: var(--paper);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.2rem, 4vw, 4.2rem);
-  font-weight: 500;
-  line-height: 1;
+.about-copy {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.about-copy p {
+  max-width: 920px;
+  margin-top: 16px;
+}
+
+.about-copy h3 {
+  margin-top: 34px;
+}
+
+.about-cta {
+  display: block;
+}
+
+.about-cta h2 {
+  max-width: 920px;
 }
 
 .category-list {
@@ -816,8 +831,8 @@ h3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .portrait-panel {
-    min-height: 420px;
+  .about-detail {
+    grid-template-columns: 1fr;
   }
 }
 
