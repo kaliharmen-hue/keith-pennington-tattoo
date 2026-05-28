@@ -784,6 +784,24 @@ textarea:focus {
   margin-top: 4px;
 }
 
+.form-status {
+  border: 1px solid rgba(242, 238, 231, 0.16);
+  background: rgba(242, 238, 231, 0.05);
+  padding: 16px 18px;
+  color: var(--paper);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.form-status.success {
+  border-color: rgba(223, 43, 44, 0.7);
+  background: rgba(223, 43, 44, 0.16);
+}
+
+.form-status.error {
+  border-color: rgba(223, 43, 44, 0.86);
+}
+
 .form-note {
   max-width: 360px;
   color: var(--muted);
