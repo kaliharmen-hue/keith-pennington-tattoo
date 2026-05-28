@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const styles = ['Black and grey', 'Fine line', 'Script', 'Symbolic tattoos', 'Cover-ups and reworks', 'Small pieces'];
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const approachImage = `${base}assets/about/keith-pennington-tattoo-artist.png`;
 const galleryPreview = [
@@ -34,9 +33,7 @@ const galleryPreview = [
       <p>Getting a tattoo is personal. At Inked Skin, Keith takes the time to understand what you want, how it will sit on the body and how it will age over time.</p>
       <h3>Clear guidance, steady work and designs that fit the body.</h3>
       <p>Every tattoo starts with a conversation. If your idea needs refining, resizing or adjusting to work better as a tattoo, Keith will guide you through it clearly.</p>
-      <div class="style-list" aria-label="Tattoo styles">
-        {styles.map((style) => <span>{style}</span>)}
-      </div>
+      <p class="specialisms">Keith specialises in black and grey, fine line, script, symbolic tattoos, cover-ups, reworks and small personal pieces.</p>
     </div>
     <div class="approach-side">
       <figure class="approach-image">

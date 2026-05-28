@@ -264,10 +264,6 @@ h2 {
   margin-top: 42px;
 }
 
-.approach-copy .style-list {
-  max-width: 760px;
-}
-
 .approach-side {
   position: sticky;
   top: 112px;
@@ -365,7 +361,6 @@ h2 {
   max-width: 900px;
 }
 
-.style-list,
 .category-list {
   display: flex;
   flex-wrap: wrap;
@@ -373,12 +368,19 @@ h2 {
   margin-top: 34px;
 }
 
-.style-list span,
 .category-list a {
   border: 1px solid rgba(242, 238, 231, 0.16);
   background: rgba(242, 238, 231, 0.04);
   padding: 12px 14px;
   color: var(--paper);
+}
+
+.specialisms {
+  max-width: 760px;
+  border-top: 1px solid rgba(242, 238, 231, 0.14);
+  padding-top: 20px;
+  color: var(--paper);
+  font-weight: 700;
 }
 
 .section-note {
