@@ -375,6 +375,26 @@ h2 {
 
 .full-gallery {
   align-items: start;
+  gap: 4px;
+}
+
+.full-gallery .photo-card {
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  border-color: rgba(242, 238, 231, 0.1);
+  background: #0e0d0c;
+}
+
+.full-gallery .photo-card img {
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
+  padding: 0;
+}
+
+.full-gallery .photo-card:hover img {
+  transform: none;
+  filter: contrast(1.04);
 }
 
 .lightbox {
@@ -792,6 +812,10 @@ h3 {
     grid-template-columns: 1fr 1fr;
   }
 
+  .full-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .portrait-panel {
     min-height: 420px;
   }
@@ -832,6 +856,19 @@ h3 {
 
   .photo-card img {
     aspect-ratio: 4 / 3;
+  }
+
+  .full-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .full-gallery .photo-card {
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+  }
+
+  .full-gallery .photo-card img {
+    aspect-ratio: auto;
   }
 
   .lightbox {
