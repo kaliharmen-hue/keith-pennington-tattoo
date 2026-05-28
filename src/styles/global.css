@@ -220,8 +220,10 @@ h1 {
 }
 
 .approach-section {
-  grid-template-columns: minmax(0, 680px) minmax(340px, 520px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(340px, 0.8fr);
+  justify-content: start;
   gap: clamp(36px, 4vw, 72px);
+  padding-bottom: clamp(28px, 5vw, 64px);
 }
 
 h2 {
@@ -264,11 +266,9 @@ h2 {
 }
 
 .approach-side {
-  position: sticky;
-  top: 112px;
   display: grid;
   gap: 18px;
-  width: min(100%, 520px);
+  width: min(100%, 620px);
   justify-self: start;
 }
 
@@ -298,11 +298,14 @@ h2 {
   object-fit: contain;
 }
 
+.promise-strip-section {
+  padding: 0 clamp(20px, 6vw, 84px) clamp(70px, 9vw, 120px);
+}
+
 .promise-strip {
-  grid-column: 1 / -1;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: clamp(8px, 2vw, 18px);
   background: var(--rust);
   color: var(--paper);
   font-weight: 800;
