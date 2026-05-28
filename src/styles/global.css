@@ -220,9 +220,9 @@ h1 {
 }
 
 .approach-section {
-  grid-template-columns: minmax(0, 640px) minmax(340px, 520px);
+  grid-template-columns: minmax(0, 760px) minmax(360px, 620px);
   justify-content: center;
-  gap: clamp(36px, 5vw, 80px);
+  gap: clamp(44px, 6vw, 104px);
 }
 
 h2 {
@@ -301,6 +301,8 @@ h2 {
 
 .promise-strip {
   grid-column: 1 / -1;
+  width: min(100%, 1484px);
+  justify-self: center;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: clamp(8px, 2vw, 18px);
