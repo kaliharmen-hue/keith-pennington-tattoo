@@ -627,6 +627,20 @@ h2 {
   max-width: 920px;
 }
 
+.about-cta p:not(.eyebrow) {
+  max-width: 920px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.about-cta .cta-prompt {
+  margin-top: 34px;
+  color: var(--paper);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 700;
+}
+
 .category-list {
   align-content: start;
   margin-top: 0;
