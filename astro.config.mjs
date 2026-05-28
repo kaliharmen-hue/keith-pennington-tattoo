@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://kaliharmen-hue.github.io',
-  base: '/keith-pennington-tattoo'
+  site: 'https://www.inkedskin.co.uk'
 });
