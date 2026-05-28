@@ -303,9 +303,8 @@ h2 {
 
 .promise-strip {
   grid-column: 1 / -1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: clamp(8px, 2vw, 18px);
   background: var(--rust);
   color: var(--paper);
@@ -313,7 +312,14 @@ h2 {
 }
 
 .promise-strip span {
-  padding: 16px clamp(16px, 3vw, 28px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+  padding: 18px clamp(18px, 3vw, 34px);
+  text-align: center;
+  font-size: clamp(1.05rem, 1.35vw, 1.38rem);
+  line-height: 1.18;
 }
 
 .promise-strip span + span {
