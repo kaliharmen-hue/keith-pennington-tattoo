@@ -147,7 +147,7 @@ p {
 }
 
 .hero-copy {
-  max-width: 760px;
+  max-width: 860px;
 }
 
 .eyebrow {
@@ -160,10 +160,10 @@ p {
 }
 
 h1 {
-  max-width: 12.7ch;
+  max-width: 13.8ch;
   color: var(--paper);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.6rem, 7.2vw, 7rem);
+  font-size: clamp(3.45rem, 6.6vw, 6.35rem);
   font-weight: 500;
   line-height: 0.98;
 }
@@ -624,15 +624,16 @@ h2 {
 
 .cta-band {
   align-items: center;
-  background: var(--paper);
-  color: var(--ink);
+  background: #1d1b19;
+  color: var(--paper);
   padding-block: clamp(54px, 7vw, 92px);
   grid-template-columns: minmax(0, 0.78fr) minmax(300px, 0.72fr);
+  border-block: 1px solid rgba(242, 238, 231, 0.08);
 }
 
 .cta-band h2,
 .cta-band .eyebrow {
-  color: var(--ink);
+  color: var(--paper);
 }
 
 .cta-band h2 {
@@ -643,7 +644,7 @@ h2 {
 .cta-band p {
   max-width: 780px;
   margin-top: 16px;
-  color: #5d554c;
+  color: var(--muted);
 }
 
 .cta-copy .button {
