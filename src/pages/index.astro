@@ -26,38 +26,34 @@ const galleryPreview = [
     </div>
   </section>
 
-  <section class="section intro-grid">
-    <div class="intro-copy">
+  <section class="section approach-section">
+    <div class="approach-copy">
       <p class="eyebrow">A calmer way to get tattooed</p>
       <h2>Good tattooing starts before the needle comes out.</h2>
       <p>Getting a tattoo is personal. At Inked Skin, Keith takes the time to understand what you want, how it will sit on the body and how it will age over time.</p>
+      <h3>Clear guidance, steady work and designs that fit the body.</h3>
+      <p>Every tattoo starts with a conversation. If your idea needs refining, resizing or adjusting to work better as a tattoo, Keith will guide you through it clearly.</p>
+      <div class="style-list" aria-label="Tattoo styles">
+        {styles.map((style) => <span>{style}</span>)}
+      </div>
     </div>
-    <div class="promise-card" aria-label="Keith's approach">
-      <p>No rushed work.</p>
-      <p>No copy-and-paste designs.</p>
-      <p>No making you feel awkward for asking questions.</p>
+    <div class="approach-side">
+      <div class="promise-card" aria-label="Keith's approach">
+        <p>No rushed work.</p>
+        <p>No copy-and-paste designs.</p>
+        <p>No making you feel awkward for asking questions.</p>
+      </div>
     </div>
   </section>
 
-  <section class="section muted">
-    <div class="section-heading">
-      <p class="eyebrow">Tattoo styles</p>
-      <h2>Clear guidance, steady work and designs that fit the body.</h2>
-    </div>
-    <div class="style-list" aria-label="Tattoo styles">
-      {styles.map((style) => <span>{style}</span>)}
-    </div>
-    <p class="section-note">Every tattoo starts with a conversation. If your idea needs refining, resizing or adjusting to work better as a tattoo, Keith will guide you through it clearly.</p>
-  </section>
-
-  <section class="section quick-links-section">
+  <section class="section quick-links-section muted">
     <div class="section-heading">
       <p class="eyebrow">Before you book</p>
       <h2>Need the practical details?</h2>
     </div>
     <div class="quick-link-grid">
       <article>
-        <h3>How it works</h3>
+        <h3>How It Works</h3>
         <p>See the full booking process, from first enquiry and references through to deposit, artwork and appointment day.</p>
         <a class="button secondary" href={`${base}contact/#how-it-works`}>View how it works</a>
       </article>
