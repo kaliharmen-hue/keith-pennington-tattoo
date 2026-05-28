@@ -220,9 +220,8 @@ h1 {
 }
 
 .approach-section {
-  grid-template-columns: minmax(0, 760px) minmax(360px, 620px);
-  justify-content: center;
-  gap: clamp(44px, 6vw, 104px);
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.75fr);
+  gap: clamp(36px, 4vw, 72px);
 }
 
 h2 {
@@ -269,8 +268,8 @@ h2 {
   top: 112px;
   display: grid;
   gap: 18px;
-  width: min(100%, 620px);
-  justify-self: start;
+  width: min(100%, 700px);
+  justify-self: end;
 }
 
 .approach-image {
@@ -301,8 +300,6 @@ h2 {
 
 .promise-strip {
   grid-column: 1 / -1;
-  width: min(100%, 1484px);
-  justify-self: center;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: clamp(8px, 2vw, 18px);
