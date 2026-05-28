@@ -276,7 +276,7 @@ h2 {
   top: 112px;
   display: grid;
   gap: 18px;
-  max-width: 620px;
+  max-width: 460px;
   justify-self: end;
 }
 
@@ -301,10 +301,9 @@ h2 {
 .approach-image img {
   display: block;
   width: 100%;
-  max-height: 520px;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: center 42%;
+  max-height: 560px;
+  height: auto;
+  object-fit: contain;
 }
 
 .promise-card {
