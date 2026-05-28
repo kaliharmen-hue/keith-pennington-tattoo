@@ -546,8 +546,8 @@ h2 {
 
 .about-detail {
   display: grid;
-  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
-  gap: clamp(28px, 6vw, 76px);
+  grid-template-columns: minmax(260px, 0.58fr) minmax(0, 1.42fr);
+  gap: clamp(28px, 5vw, 58px);
   align-items: start;
 }
 
@@ -561,7 +561,8 @@ h2 {
 .about-photo img {
   display: block;
   width: 100%;
-  height: auto;
+  max-height: 640px;
+  object-fit: contain;
 }
 
 .about-copy {
