@@ -220,7 +220,7 @@ h1 {
 }
 
 .approach-section {
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
+  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 0.9fr);
 }
 
 h2 {
@@ -262,11 +262,6 @@ h2 {
   margin-top: 42px;
 }
 
-.approach-copy .promise-card {
-  max-width: 680px;
-  margin-top: 34px;
-}
-
 .approach-copy .style-list {
   max-width: 760px;
 }
@@ -276,7 +271,7 @@ h2 {
   top: 112px;
   display: grid;
   gap: 18px;
-  max-width: 460px;
+  width: min(100%, 620px);
   justify-self: end;
 }
 
@@ -301,9 +296,28 @@ h2 {
 .approach-image img {
   display: block;
   width: 100%;
-  max-height: 560px;
+  max-height: 680px;
   height: auto;
   object-fit: contain;
+}
+
+.promise-strip {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: clamp(8px, 2vw, 18px);
+  background: var(--rust);
+  color: var(--paper);
+  font-weight: 800;
+}
+
+.promise-strip span {
+  padding: 16px clamp(16px, 3vw, 28px);
+}
+
+.promise-strip span + span {
+  border-left: 1px solid rgba(251, 248, 241, 0.34);
 }
 
 .promise-card {
@@ -910,6 +924,8 @@ h3 {
 
   .approach-side {
     position: static;
+    width: 100%;
+    justify-self: stretch;
   }
 
   .gallery-grid,
@@ -995,6 +1011,15 @@ h3 {
 
   .process-step {
     grid-template-columns: 1fr;
+  }
+
+  .promise-strip {
+    display: grid;
+  }
+
+  .promise-strip span + span {
+    border-top: 1px solid rgba(251, 248, 241, 0.34);
+    border-left: 0;
   }
 
   .site-footer {
