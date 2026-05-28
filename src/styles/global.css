@@ -407,6 +407,10 @@ h2 {
   font-weight: 700;
 }
 
+.approach-actions {
+  margin-top: 28px;
+}
+
 .section-note {
   max-width: 760px;
   margin-top: 26px;
