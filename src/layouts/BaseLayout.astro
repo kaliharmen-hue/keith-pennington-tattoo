@@ -40,7 +40,15 @@ const navItems = [
           <small>Keith Pennington, Tattoo Artist</small>
         </span>
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+        <span class="menu-toggle-label">Menu</span>
+        <span class="menu-toggle-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <nav class="site-nav" id="main-navigation" aria-label="Main navigation">
         {navItems.map((item) => (
           <a href={item.href} aria-current={current === item.key ? 'page' : undefined}>{item.label}</a>
         ))}
@@ -59,5 +67,16 @@ const navItems = [
         {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
       </nav>
     </footer>
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const siteHeader = document.querySelector('.site-header');
+
+      menuToggle?.addEventListener('click', () => {
+        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+        siteHeader?.classList.toggle('nav-open', !isOpen);
+      });
+    </script>
   </body>
 </html>
