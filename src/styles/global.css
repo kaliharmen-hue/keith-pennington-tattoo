@@ -533,8 +533,8 @@ h2 {
   border: 1px solid rgba(242, 238, 231, 0.12);
   padding: 28px;
   background:
-    linear-gradient(180deg, transparent, rgba(21, 19, 18, 0.82)),
-    url("/assets/studio-hero.png") center / cover no-repeat;
+    linear-gradient(180deg, rgba(21, 19, 18, 0.04), rgba(21, 19, 18, 0.88)),
+    url("/assets/about/keith-pennington-tattoo-artist.png") center / cover no-repeat;
   box-shadow: var(--shadow);
 }
 
