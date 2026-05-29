@@ -1183,8 +1183,8 @@ h3 {
   }
 
   h1 {
-    max-width: 10.4ch;
-    font-size: clamp(2.45rem, 10vw, 3.2rem);
+    max-width: 100%;
+    font-size: clamp(2.2rem, 9.3vw, 2.85rem);
     line-height: 1.04;
   }
 
@@ -1199,7 +1199,7 @@ h3 {
   .hero {
     min-height: auto;
     padding-top: 44px;
-    padding-bottom: 22px;
+    padding-bottom: 0;
   }
 
   .hero-copy {
@@ -1235,11 +1235,11 @@ h3 {
 
   .approach-detail {
     padding-top: 32px;
-    padding-bottom: 42px;
+    padding-bottom: 20px;
   }
 
   .approach-intro {
-    padding-top: 36px;
+    padding-top: 24px;
   }
 
   .approach-image {
@@ -1283,7 +1283,8 @@ h3 {
   }
 
   .gallery-preview {
-    padding-bottom: 34px;
+    padding-top: 30px;
+    padding-bottom: 16px;
   }
 
   .gallery-preview h2 {
@@ -1296,6 +1297,7 @@ h3 {
   }
 
   .gallery-preview .photo-card img {
+    width: 100%;
     height: auto;
     aspect-ratio: auto;
     object-fit: contain;
@@ -1353,7 +1355,7 @@ h3 {
 
   .cta-band {
     gap: 24px;
-    padding-top: 38px;
+    padding-top: 24px;
     padding-bottom: 48px;
   }
 
