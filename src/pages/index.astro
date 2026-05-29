@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
-const approachImage = `${base}assets/about/keith-pennington-tattoo-artist.png`;
+const approachImage = `${base}assets/about/keith-pennington-homepage.png`;
 const ctaImage = `${base}assets/about/ready-to-talk-keith-tattoo-artist.png`;
 const galleryPreview = [
   { src: `${base}assets/gallery/gallery-01.jpeg`, label: 'Black and grey tattoo' },
@@ -29,10 +29,17 @@ const galleryPreview = [
 
   <section class="section approach-section">
     <div class="section-inner approach-inner">
-      <div class="approach-copy">
+      <div class="approach-copy approach-intro">
         <p class="eyebrow">A calmer way to get tattooed</p>
         <h2>Good tattooing starts before the needle comes out.</h2>
         <p>Getting a tattoo is personal. At Inked Skin, Keith takes the time to understand what you want, how it will sit on the body and how it will age over time.</p>
+      </div>
+      <div class="approach-side">
+        <figure class="approach-image">
+          <img src={approachImage} alt="Keith Pennington tattooing at Inked Skin" loading="lazy" />
+        </figure>
+      </div>
+      <div class="approach-copy approach-detail">
         <h3>Clear guidance, steady work and designs that fit the body.</h3>
         <p>Every tattoo starts with a conversation. If your idea needs refining, resizing or adjusting to work better as a tattoo, Keith will guide you through it clearly.</p>
         <p class="specialisms">Keith specialises in black and grey, fine line, script, symbolic tattoos, cover-ups, reworks and small personal pieces.</p>
@@ -40,11 +47,6 @@ const galleryPreview = [
           <a class="button secondary" href={`${base}contact/#how-it-works`}>View how it works</a>
           <a class="button secondary" href={`${base}contact/#faqs`}>Read FAQs</a>
         </div>
-      </div>
-      <div class="approach-side">
-        <figure class="approach-image">
-          <img src={approachImage} alt="Keith Pennington tattooing at Inked Skin" loading="lazy" />
-        </figure>
       </div>
       <div class="promise-strip" aria-label="Keith's approach">
         <span>No rushed work.</span>
