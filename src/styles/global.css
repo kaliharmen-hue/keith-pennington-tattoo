@@ -443,12 +443,18 @@ h2 {
 }
 
 .specialisms {
+  position: relative;
   max-width: 760px;
-  border-top: 1px solid rgba(242, 238, 231, 0.14);
-  padding-top: 20px;
+  border: 1px solid rgba(242, 238, 231, 0.12);
+  border-left: 4px solid var(--rust);
+  background:
+    linear-gradient(135deg, rgba(223, 43, 44, 0.16), transparent 44%),
+    rgba(242, 238, 231, 0.035);
+  padding: clamp(18px, 2.5vw, 26px);
   color: var(--paper);
   font-size: clamp(1.12rem, 1.22vw, 1.28rem);
   font-weight: 700;
+  line-height: 1.5;
 }
 
 .approach-actions {
@@ -1235,7 +1241,7 @@ h3 {
 
   .approach-detail {
     padding-top: 32px;
-    padding-bottom: 20px;
+    padding-bottom: 4px;
   }
 
   .approach-intro {
@@ -1258,7 +1264,7 @@ h3 {
   }
 
   .specialisms {
-    padding-top: 16px;
+    padding: 16px 18px;
     font-size: 1.02rem;
     line-height: 1.5;
   }
@@ -1283,7 +1289,7 @@ h3 {
   }
 
   .gallery-preview {
-    padding-top: 30px;
+    padding-top: 18px;
     padding-bottom: 16px;
   }
 
