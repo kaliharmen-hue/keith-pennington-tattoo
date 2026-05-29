@@ -265,8 +265,7 @@ h1 {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   grid-template-areas:
     "intro image"
-    "detail image"
-    "promise promise";
+    "detail image";
   gap: 0;
   align-items: stretch;
   justify-content: center;
@@ -365,15 +364,16 @@ h2 {
 }
 
 .promise-strip {
-  grid-area: promise;
-  grid-column: 1 / -1;
   width: 100%;
-  margin-top: clamp(10px, 2vw, 22px);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   background: var(--rust);
   color: var(--paper);
   font-weight: 800;
+}
+
+.hero-promise {
+  border-block: 1px solid rgba(251, 248, 241, 0.22);
 }
 
 .promise-strip span {
@@ -1128,8 +1128,7 @@ h3 {
     grid-template-areas:
       "intro"
       "image"
-      "detail"
-      "promise";
+      "detail";
   }
 
   .approach-side {
