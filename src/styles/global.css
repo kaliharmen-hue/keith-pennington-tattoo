@@ -860,6 +860,20 @@ textarea:focus {
   margin-top: 10px;
 }
 
+.social-callout {
+  border-top: 1px solid rgba(242, 238, 231, 0.12);
+  padding-top: 26px;
+}
+
+.social-callout p:not(.eyebrow) {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+.social-callout .text-link {
+  margin-top: 12px;
+}
+
 .process-section .section-heading,
 .faq-section .section-heading {
   margin-bottom: 42px;
