@@ -13,6 +13,7 @@ const faviconSrc = `${base}assets/logo/inked-skin-favicon-new.png`;
 const shareImageSrc = `${base}assets/logo/inked-skin-southampton-share.jpg`;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const shareImageUrl = new URL(shareImageSrc, Astro.site).toString();
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.inkedskin.co.uk';
 const navItems = [
   { href: base, label: 'Home', key: 'home' },
   { href: `${base}about/`, label: 'About', key: 'about' },
@@ -22,6 +23,41 @@ const navItems = [
   { href: `${base}contact/`, label: 'Contact', key: 'contact' }
 ];
 const instagramUrl = 'https://www.instagram.com/inkedskin_uk/';
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['LocalBusiness', 'TattooParlor'],
+  '@id': `${siteUrl}/#inked-skin`,
+  name: 'Inked Skin',
+  alternateName: 'Inked Skin Tattoo',
+  url: siteUrl,
+  image: shareImageUrl,
+  logo: new URL(logoSrc, Astro.site).toString(),
+  description: 'Custom tattoo work by Keith Pennington at Inked Skin in Shirley, Southampton.',
+  founder: {
+    '@type': 'Person',
+    name: 'Keith Pennington',
+    jobTitle: 'Tattoo Artist'
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Shirley',
+    addressRegion: 'Southampton',
+    addressCountry: 'GB'
+  },
+  areaServed: [
+    { '@type': 'Place', name: 'Shirley' },
+    { '@type': 'City', name: 'Southampton' },
+    { '@type': 'AdministrativeArea', name: 'Hampshire' }
+  ],
+  sameAs: [instagramUrl],
+  makesOffer: [
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Custom tattoos' } },
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Black and grey tattoos' } },
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Fine line tattoos' } },
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Script tattoos' } },
+    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cover-up tattoos' } }
+  ]
+};
 ---
 <!doctype html>
 <html lang="en-GB">
@@ -45,6 +81,7 @@ const instagramUrl = 'https://www.instagram.com/inkedskin_uk/';
     <meta name="twitter:image" content={shareImageUrl} />
     <link rel="icon" type="image/png" href={faviconSrc} />
     <link rel="apple-touch-icon" href={faviconSrc} />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
     <title>{title}</title>
   </head>
   <body>
