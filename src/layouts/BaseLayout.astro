@@ -8,8 +8,8 @@ const {
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
-const logoSrc = `${base}assets/logo/inkedskin-logo-inverse-transparent-silver-detail.png`;
-const faviconSrc = `${base}assets/logo/inked-skin-favicon-512.png`;
+const logoSrc = `${base}assets/logo/inked-skin-logo-new.png`;
+const faviconSrc = `${base}assets/logo/inked-skin-favicon-new.png`;
 const shareImageSrc = `${base}assets/logo/inked-skin-southampton-share.jpg`;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const shareImageUrl = new URL(shareImageSrc, Astro.site).toString();
@@ -43,7 +43,7 @@ const instagramUrl = 'https://www.instagram.com/inkedskin_uk/';
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={shareImageUrl} />
-    <link rel="icon" type="image/png" sizes="512x512" href={faviconSrc} />
+    <link rel="icon" type="image/png" href={faviconSrc} />
     <link rel="apple-touch-icon" href={faviconSrc} />
     <title>{title}</title>
   </head>

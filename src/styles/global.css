@@ -78,8 +78,8 @@ p {
 }
 
 .brand-logo {
-  width: 104px;
-  height: 64px;
+  width: 128px;
+  height: 58px;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -1045,8 +1045,8 @@ h3 {
   }
 
   .brand-logo {
-    width: 92px;
-    height: 58px;
+    width: 112px;
+    height: 50px;
   }
 
   .menu-toggle {
